@@ -1,5 +1,6 @@
 package com.sungkanngoding.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +61,32 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        // Temukan tombol llEditProfile dari layout fragment_profile
+        LinearLayout llEditProfile = rootView.findViewById(R.id.llEditProfile);
+
+        LinearLayout llEditPrivacy = rootView.findViewById(R.id.llEditPrivacy);
+
+        // Tambahkan OnClickListener untuk tombol llEditProfile
+        llEditProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka EditProfileActivity saat layar ditekan
+                Intent gotoEditProfile = new Intent(getActivity(), EditProfileActivity.class);
+                startActivity(gotoEditProfile);
+            }
+        });
+        llEditPrivacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka EditProfileActivity saat layar ditekan
+                Intent gotoeditprivacy = new Intent(getActivity(), PrivacySettingsActivity.class);
+                startActivity(gotoeditprivacy);
+            }
+        });
+
+        // Kembalikan rootView yang sudah diubah
+        return rootView;
     }
 }

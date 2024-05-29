@@ -115,6 +115,7 @@
 
                 <!-- Linear Layout Ikon dan Teks -->
                 <LinearLayout
+                    android:id="@+id/llEditProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -179,6 +180,7 @@
 
                 <!-- Linear Layout Ikon dan Teks -->
                 <LinearLayout
+                    android:id="@+id/llEditPrivacy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
