@@ -59,3 +59,9 @@ Aplikasi Bank Sampah adalah aplikasi yang dirancang untuk mempermudah pengelolaa
 
    ```bash
    git clone (https://github.com/YuTo26/MyApplication.git)
+
+2. Dokumentasi UI UX Aplikasi Bank Sampah
+
+   ```bash
+   https://xd.adobe.com/view/2981d9f6-ada6-4c6f-b56b-906fd87a1724-7cd2/
+
