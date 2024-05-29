@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BangSampah</string>
+    <string name="slogan_app">Yuk Mulai Nabung Sampah!</string>
+    <string name="signin">SIGN IN</string>
+    <string name="continue_label">CONTINUE</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="email_label">Email Address</string>
+    <string name="name_label">Name</string>
+    <string name="bio_label">Add Bio</string>
+    <string name="explore">EXPLORE NOW</string>
+    <string name="title_activity_exmaple">ExmapleActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
