@@ -9,11 +9,10 @@
     tools:context=".ItemDetailActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/pict_item"
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg_plastic_bootle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,13 +34,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4">
+        app:layout_constraintTop_toTopOf="@+id/pict_item">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/mregular"
-            android:text="Information"
+            android:fontFamily="@font/robotoregular"
+            android:text="Informasi Umum"
             android:textColor="@color/blackPrimary"
             android:textSize="20sp" />
 
@@ -49,8 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:fontFamily="@font/mlight"
-            android:text="Knowing before selling"
+            android:fontFamily="@font/robotolight"
+            android:text="Pahami sebelum menjual"
             android:textColor="@color/grayPrimary"
             android:textSize="16sp" />
 
@@ -77,20 +76,19 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginTop="6dp">
                 <TextView
-                    android:id="@+id/jenis_sampah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/mregular"
+                    android:fontFamily="@font/robotoregular"
                     android:text="Jenis Sampah"
                     android:textColor="@color/blackPrimary"
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/jenis_sampah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/mlight"
-                    android:text="Botol Plastik"
+                    android:fontFamily="@font/robotolight"
                     android:textColor="@color/grayPrimary"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -117,17 +115,17 @@
                     android:id="@+id/harga_satuan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/mregular"
+                    android:fontFamily="@font/robotoregular"
                     android:text="Harga Satuan"
                     android:textColor="@color/blackPrimary"
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/harga_sampah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/mlight"
-                    android:text="Rp. 3.000 - Rp. 5.000 /Kg"
+                    android:fontFamily="@font/robotolight"
                     android:textColor="@color/grayPrimary"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -135,12 +133,11 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/deskripsi_item"
+            android:id="@+id/deskripsi_sampah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:fontFamily="@font/mlight"
-            android:text="Botol plastik bekas, seperti botol air mineral, botol minuman ringan, dan botol jus, dapat didaur ulang untuk mengurangi limbah plastik."
+            android:fontFamily="@font/robotolight"
             android:textColor="@color/grayPrimary"
             android:lineSpacingExtra="6dp"
             android:textSize="15sp" />
@@ -148,36 +145,36 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_sell_trash"
-        android:layout_width="250dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/btnJualSampah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_btn_blue_primary"
-        android:fontFamily="@font/mmedium"
-        android:text="JUAL SAMPAH"
+        android:fontFamily="@font/robotomedium"
+        android:text="Jual Sampah"
+        android:textAllCaps="false"
         android:textColor="#FFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintWidth_percent="0.4" />
 
-    <LinearLayout
-        android:id="@+id/btn_back"
-        android:layout_width="90dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/bg_layout_white"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/btn_sell_trash"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="32dp"
-            android:src="@drawable/icon_back" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_btn_white_primary"
+        android:fontFamily="@font/robotomedium"
+        android:text="Kembali"
+        android:textColor="@color/blackPrimary"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintWidth_percent="0.4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "754185283160",
+    "firebase_url": "https://bangsampah-9aa12-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "bangsampah-9aa12",
+    "storage_bucket": "bangsampah-9aa12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754185283160:android:10f420073346e56f50cc2d",
+        "android_client_info": {
+          "package_name": "com.sungkanngoding.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUU3An8qodqLR-pHTTgj0e1SjKr15MA0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

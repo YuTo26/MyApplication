@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgPrimary"
+    tools:context=".SuccessExchangeActivity">
+
+    <ImageView
+        android:id="@+id/ivSuccessTransaction"
+        android:layout_width="285dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/pict_success_exc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSuccessTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Transaksi Berhasil"
+        android:textAlignment="center"
+        android:textColor="@color/blackPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivSuccessTransaction" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotolight"
+        android:lineSpacingExtra="9dp"
+        android:text="Terima kasih! \nPenukaran saldo Anda telah berhasil. \nNikmati barang baru Anda."
+        android:textAlignment="center"
+        android:textColor="@color/grayPrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSuccessTransaction" />
+
+    <Button
+        android:id="@+id/btnCheckDetailsExchange"
+        android:layout_width="220dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_btn_blue_primary"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/mmedium"
+        android:text="@string/check_details"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+    <Button
+        android:id="@+id/btnMyDashboard"
+        android:layout_width="220dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_btn_green_primary"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/mmedium"
+        android:text="@string/my_dashboard"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckDetailsExchange" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

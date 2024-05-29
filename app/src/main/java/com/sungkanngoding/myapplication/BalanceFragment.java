@@ -1,5 +1,6 @@
 package com.sungkanngoding.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +25,8 @@ public class BalanceFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private Button btnTukarBlender;
 
     public BalanceFragment() {
         // Required empty public constructor
@@ -59,6 +63,177 @@ public class BalanceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_balance, container, false);
+        View view = inflater.inflate(R.layout.fragment_balance, container, false);
+
+        // Initialize button
+        Button btnTukarBlender = view.findViewById(R.id.btnTukarBlender);
+        Button btnTukarStrika = view.findViewById(R.id.btnTukarStrika);
+        Button btnTukarMagicom = view.findViewById(R.id.btnTukarMagicom);
+        Button btnTukarSpeaker = view.findViewById(R.id.btnTukarSpeaker);
+        Button btnTukarAirbuds = view.findViewById(R.id.btnTukarAirbuds);
+        Button btnTukarPowerbank = view.findViewById(R.id.btnTukarPowerbank);
+        Button btnTukarMinyak = view.findViewById(R.id.btnTukarMinyak);
+        Button btnTukarBeras = view.findViewById(R.id.btnTukarBeras);
+        Button btnTukarMie = view.findViewById(R.id.btnTukarMie);
+
+        // Set onClick listener
+        btnTukarBlender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka ExchangeConfirmationActivity saat tombol ditekan
+                Intent gotoExchangeConfirmation = new Intent(getActivity(), ExchangeConfirmationActivity.class);
+
+                // Menambahkan data tambahan jika diperlukan
+                // Misalnya, jenis barang yang akan ditukar
+                gotoExchangeConfirmation.putExtra("jenis_barang", "Blender Miyako");
+
+                // Mulai activity baru
+                startActivity(gotoExchangeConfirmation);
+
+                // Terapkan animasi fade in/out
+                getActivity().overridePendingTransition(R.anim.fade_in_page, R.anim.fade_out_page);
+            }
+        });
+        btnTukarStrika.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka ExchangeConfirmationActivity saat tombol ditekan
+                Intent gotoExchangeConfirmation = new Intent(getActivity(), ExchangeConfirmationActivity.class);
+
+                // Menambahkan data tambahan jika diperlukan
+                // Misalnya, jenis barang yang akan ditukar
+                gotoExchangeConfirmation.putExtra("jenis_barang", "Strika Philips");
+
+                // Mulai activity baru
+                startActivity(gotoExchangeConfirmation);
+
+                // Terapkan animasi fade in/out
+                getActivity().overridePendingTransition(R.anim.fade_in_page, R.anim.fade_out_page);
+            }
+        });
+        btnTukarMagicom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka ExchangeConfirmationActivity saat tombol ditekan
+                Intent gotoExchangeConfirmation = new Intent(getActivity(), ExchangeConfirmationActivity.class);
+
+                // Menambahkan data tambahan jika diperlukan
+                // Misalnya, jenis barang yang akan ditukar
+                gotoExchangeConfirmation.putExtra("jenis_barang", "Magicom Cosmos");
+
+                // Mulai activity baru
+                startActivity(gotoExchangeConfirmation);
+
+                // Terapkan animasi fade in/out
+                getActivity().overridePendingTransition(R.anim.fade_in_page, R.anim.fade_out_page);
+            }
+        });
+        btnTukarSpeaker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka ExchangeConfirmationActivity saat tombol ditekan
+                Intent gotoExchangeConfirmation = new Intent(getActivity(), ExchangeConfirmationActivity.class);
+
+                // Menambahkan data tambahan jika diperlukan
+                // Misalnya, jenis barang yang akan ditukar
+                gotoExchangeConfirmation.putExtra("jenis_barang", "Speaker JBL");
+
+                // Mulai activity baru
+                startActivity(gotoExchangeConfirmation);
+
+                // Terapkan animasi fade in/out
+                getActivity().overridePendingTransition(R.anim.fade_in_page, R.anim.fade_out_page);
+            }
+        });
+        btnTukarAirbuds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka ExchangeConfirmationActivity saat tombol ditekan
+                Intent gotoExchangeConfirmation = new Intent(getActivity(), ExchangeConfirmationActivity.class);
+
+                // Menambahkan data tambahan jika diperlukan
+                // Misalnya, jenis barang yang akan ditukar
+                gotoExchangeConfirmation.putExtra("jenis_barang", "Airbuds Samsung");
+
+                // Mulai activity baru
+                startActivity(gotoExchangeConfirmation);
+
+                // Terapkan animasi fade in/out
+                getActivity().overridePendingTransition(R.anim.fade_in_page, R.anim.fade_out_page);
+            }
+        });
+        btnTukarPowerbank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka ExchangeConfirmationActivity saat tombol ditekan
+                Intent gotoExchangeConfirmation = new Intent(getActivity(), ExchangeConfirmationActivity.class);
+
+                // Menambahkan data tambahan jika diperlukan
+                // Misalnya, jenis barang yang akan ditukar
+                gotoExchangeConfirmation.putExtra("jenis_barang", "Powerbank Robot");
+
+                // Mulai activity baru
+                startActivity(gotoExchangeConfirmation);
+
+                // Terapkan animasi fade in/out
+                getActivity().overridePendingTransition(R.anim.fade_in_page, R.anim.fade_out_page);
+            }
+        });
+        btnTukarMinyak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka ExchangeConfirmationActivity saat tombol ditekan
+                Intent gotoExchangeConfirmation = new Intent(getActivity(), ExchangeConfirmationActivity.class);
+
+                // Menambahkan data tambahan jika diperlukan
+                // Misalnya, jenis barang yang akan ditukar
+                gotoExchangeConfirmation.putExtra("jenis_barang", "Minyak Goreng 1L");
+
+                // Mulai activity baru
+                startActivity(gotoExchangeConfirmation);
+
+                // Terapkan animasi fade in/out
+                getActivity().overridePendingTransition(R.anim.fade_in_page, R.anim.fade_out_page);
+            }
+        });
+        btnTukarBeras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka ExchangeConfirmationActivity saat tombol ditekan
+                Intent gotoExchangeConfirmation = new Intent(getActivity(), ExchangeConfirmationActivity.class);
+
+                // Menambahkan data tambahan jika diperlukan
+                // Misalnya, jenis barang yang akan ditukar
+                gotoExchangeConfirmation.putExtra("jenis_barang", "Beras 5Kg");
+
+                // Mulai activity baru
+                startActivity(gotoExchangeConfirmation);
+
+                // Terapkan animasi fade in/out
+                getActivity().overridePendingTransition(R.anim.fade_in_page, R.anim.fade_out_page);
+            }
+        });
+        btnTukarMie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil Intent untuk membuka ExchangeConfirmationActivity saat tombol ditekan
+                Intent gotoExchangeConfirmation = new Intent(getActivity(), ExchangeConfirmationActivity.class);
+
+                // Menambahkan data tambahan jika diperlukan
+                // Misalnya, jenis barang yang akan ditukar
+                gotoExchangeConfirmation.putExtra("jenis_barang", "Mie Rebus");
+
+                // Mulai activity baru
+                startActivity(gotoExchangeConfirmation);
+
+                // Terapkan animasi fade in/out
+                getActivity().overridePendingTransition(R.anim.fade_in_page, R.anim.fade_out_page);
+            }
+        });
+
+
+
+
+        return view;
     }
 }

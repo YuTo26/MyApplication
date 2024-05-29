@@ -9,6 +9,8 @@
     <color name="blackPrimary">#212720</color>
     <color name="yellowPrimary">#E6FFAA</color>
     <color name="greenPrimary">#1ABC9C</color>
+    <color name="redPrimary">#F44336</color>
     <color name="bgPrimary">#EDF1F8</color>
     <color name="bgTransparent">#80FFFFFF</color>
+    <color name="colorPrimaryDark">#303F9F</color>
 </resources>

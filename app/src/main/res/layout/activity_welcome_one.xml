@@ -3,79 +3,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/bgPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgPrimary"
     tools:context=".WelcomeOneActivity">
 
     <ImageView
         android:id="@+id/ivDaurUlang"
-        android:layout_width="285dp"
-        android:layout_height="285dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="100dp"
         android:src="@drawable/bisa_didaur_ulang"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
 
     <TextView
         android:id="@+id/tvDaurUlang"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/mregular"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/robotobold"
         android:text="Semua bisa didaur ulang"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="@color/blackPrimary"
-        android:textSize="24sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivDaurUlang" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/mlight"
-        android:lineSpacingExtra="9dp"
-        android:text="Dengan mendaur ulang, kamu bukan \nsaja melestarikan bumi tetapi juga \nmendukung ekonomi lokal"
-        android:textAlignment="center"
+        android:fontFamily="@font/robotolight"
+        android:text="Dengan mendaur ulang, kamu bukan saja melestarikan bumi tetapi juga mendukung ekonomi lokal"
+        android:textAlignment="viewStart"
         android:textColor="@color/grayPrimary"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDaurUlang" />
 
+
     <Button
         android:id="@+id/btnNext"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="36dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/bg_btn_blue_primary"
-        android:fontFamily="@font/mmedium"
-        android:text="NEXT"
+        android:fontFamily="@font/robotomedium"
+        android:text="Lanjut"
         android:textColor="#FFF"
         android:textSize="20sp"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintWidth_percent="0.4" />
 
     <Button
         android:id="@+id/btnSkip"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="170dp"
         android:background="@drawable/bg_btn_gray_primary"
-        android:fontFamily="@font/mmedium"
-        android:text="SKIP"
+        android:fontFamily="@font/robotomedium"
+        android:text="Lewati"
         android:textColor="@color/blackPrimary"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/btnNext"
-        app:layout_constraintHorizontal_bias="0.41"
+        android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintWidth_percent="0.4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgPrimary"
+    tools:context=".AdminPanelActivity">
+
+    <!-- scrolling content vertical -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- main content -->
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:background="@drawable/bg_gradient_primary_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/mregular"
+                android:text="Admin Panel"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_view_circle_picture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <!-- Replace with CircleView if necessary for your design -->
+            <io.github.florent37.shapeofview.shapes.CircleView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:elevation="4dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+                <ImageView
+                    android:id="@+id/photo_home_admin"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+            </io.github.florent37.shapeofview.shapes.CircleView>
+
+            <TextView
+                android:id="@+id/adminUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/robotolight"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/view4"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/adminBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/robotothin"
+                android:textColor="#FFF"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/view4"
+                app:layout_constraintTop_toBottomOf="@+id/adminUsername" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="17dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/robotolight"
+                android:text="Saldo"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/adminSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="59dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/robotoregular"
+                android:textColor="@color/yellowPrimary"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <LinearLayout
+                android:id="@+id/llAdminDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="112dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_layout_white"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Akses Cepat"
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/robotothin"
+                    android:text="kelola aktivitas yang ada"
+                    android:textColor="@color/grayPrimary"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EDEDED"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <!-- layout icon pertama -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/llListUser"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#AEF0FF"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="5dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_userlist" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="List User"
+                                android:textColor="@color/blackPrimary"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tvTotalUsers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/robotobold"
+                                android:text="0"
+                                android:textColor="@color/grayPrimary"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/robotobold"
+                                android:text="Users"
+                                android:textColor="@color/grayPrimary"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAddUsers"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#89FFC9"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="5dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_statement" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="Tambah User"
+                                android:textColor="@color/blackPrimary"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/llStatement"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#5BC3FF"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="10dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_growth" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="Laporan"
+                                android:textColor="@color/blackPrimary"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="24dp"
+                        android:background="#6EFCFF"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/llAdminBalanceHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="10dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_statement" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="Riwayat Saldo"
+                                android:textColor="@color/blackPrimary"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Konfirmasi Penjualan"
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/robotothin"
+                    android:text="cek detail dan konfirmasi penjualan terbaru"
+                    android:textColor="@color/grayPrimary"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EDEDED"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#89FFC9"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transaksi Terbaru : "
+                        android:fontFamily="@font/robotoregular"
+                        />
+                    <TextView
+                        android:id="@+id/totalTransaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:fontFamily="@font/robotobold"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvKetPenukaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Aktivitas Penukaran Saldo Pengguna"
+                android:textColor="@color/blackPrimary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAdminDashboard" />
+
+            <!-- BarChart -->
+            <LinearLayout
+                android:id="@+id/llBarchart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/bgPrimary"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvKetPenukaran">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChartTransaksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvKetTransaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Aktivitas Transaksi Jual Sampah"
+                android:textColor="@color/blackPrimary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llBarchart" />
+
+
+            <!-- LineChart -->
+            <LinearLayout
+                android:id="@+id/llLineChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/bgPrimary"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvKetTransaksi">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChartPenukaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSignOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keluar"
+                android:background="@drawable/bg_btn_green_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llLineChart"
+                android:layout_marginTop="10dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

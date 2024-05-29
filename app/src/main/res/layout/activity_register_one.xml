@@ -22,9 +22,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/mregular"
-        android:text="Create New Account"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Buat Akun Baru"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -37,12 +37,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/mlight"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/robotolight"
         android:lineSpacingExtra="9dp"
-        android:text="Please fill up the forms below \nfor information"
+        android:text="Silahkan isi formulir di bawah ini \nuntuk informasi"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -52,7 +54,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_layout_white"
         android:orientation="vertical"
@@ -74,21 +76,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="12dp"
-                android:fontFamily="@font/mlight"
+                android:fontFamily="@font/robotolight"
                 android:text="@string/username_label"
                 android:textColor="@color/grayPrimary"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <EditText
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
-                android:fontFamily="@font/mmedium"
+                android:fontFamily="@font/mlight"
                 android:inputType="text"
                 android:lines="1"
                 android:paddingLeft="12dp"
-                android:textColor="@color/blackPrimary" />
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -102,21 +104,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="12dp"
-                android:fontFamily="@font/mlight"
+                android:fontFamily="@font/robotolight"
                 android:text="@string/password_label"
                 android:textColor="@color/grayPrimary"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <EditText
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
-                android:fontFamily="@font/mmedium"
+                android:fontFamily="@font/mlight"
                 android:inputType="textPassword"
                 android:lines="1"
                 android:paddingLeft="12dp"
-                android:textColor="@color/blackPrimary" />
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -129,56 +131,57 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="12dp"
-                android:fontFamily="@font/mlight"
+                android:fontFamily="@font/robotolight"
                 android:text="@string/email_label"
                 android:textColor="@color/grayPrimary"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <EditText
+                android:id="@+id/email_address"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
-                android:fontFamily="@font/mmedium"
-                android:inputType="textPassword"
+                android:fontFamily="@font/mlight"
+                android:inputType="textEmailAddress"
                 android:lines="1"
                 android:paddingLeft="12dp"
-                android:textColor="@color/blackPrimary" />
+                android:textSize="15sp"
+                />
         </LinearLayout>
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_continue"
-        android:layout_width="250dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_btn_blue_primary"
-        android:fontFamily="@font/mmedium"
-        android:text="@string/continue_label"
+        android:fontFamily="@font/robotomedium"
+        android:text="Lanjut"
         android:textColor="#FFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintWidth_percent="0.4" />
 
-    <LinearLayout
-        android:id="@+id/btn_back"
-        android:layout_width="90dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/bg_layout_white"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/btn_continue"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="32dp"
-            android:src="@drawable/icon_back" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/bg_btn_white_primary"
+        android:fontFamily="@font/robotomedium"
+        android:text="Kembali"
+        android:textColor="@color/blackPrimary"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintWidth_percent="0.4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

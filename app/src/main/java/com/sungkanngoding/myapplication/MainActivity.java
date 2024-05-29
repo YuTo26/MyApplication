@@ -1,18 +1,18 @@
 package com.sungkanngoding.myapplication;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import com.sungkanngoding.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+    SharedPreferences sharedPreferences;
 
     private static final String MENU_HOME = "home";
     private static final String MENU_HISTORY = "history";
@@ -24,7 +24,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new HomeFragment());
+
+        sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+
+        // Periksa apakah pengguna sudah login
+        if (!sharedPreferences.getBoolean("isLoggedIn", false)) {
+            // Jika belum login, arahkan ke SignInActivity
+            Intent signInIntent = new Intent(MainActivity.this, SignInActivity.class);
+            startActivity(signInIntent);
+            finish();
+            return;
+        }
+
+        // Periksa peran pengguna dan arahkan ke halaman yang sesuai
+        String userRole = sharedPreferences.getString("userRole", "");
+        if ("admin".equals(userRole)) {
+            Intent adminIntent = new Intent(MainActivity.this, AdminPanelActivity.class);
+            startActivity(adminIntent);
+            finish();
+            return;
+        } else if ("user".equals(userRole)) {
+            replaceFragment(new HomeFragment());
+        }
 
         binding.bottomNavigationView.setOnItemSelectedListener(this::onNavigationItemSelected);
     }
@@ -53,10 +74,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        // Mengganti container dari FrameLayout ke FragmentContainerView
+        // Animasi fade in/out
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.fade_in_page, R.anim.fade_out_page);
         fragmentTransaction.replace(R.id.fragment_container_view, fragment);
         fragmentTransaction.commit();
     }

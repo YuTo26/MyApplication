@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgPrimary"
+    tools:context=".PrivacySettingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_gradient_primary_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
+            android:text="Pertanyaan Umum"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_layout_white"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <!-- Question 1 -->
+                <TextView
+                    android:id="@+id/question1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apa itu NabungSampah?"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/blackPrimary"/>
+
+                <TextView
+                    android:id="@+id/answer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingBottom="16dp"
+                    android:textColor="@color/grayPrimary"/>
+
+                <!-- Question 2 -->
+                <TextView
+                    android:id="@+id/question2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apa perbedaan NabungSampah dengan Bank Sampah atau layanan pengelola sampah lainnya?"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/blackPrimary"/>
+
+                <TextView
+                    android:id="@+id/answer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingBottom="16dp"
+                    android:textColor="@color/grayPrimary"/>
+
+                <!-- Question 3 -->
+                <TextView
+                    android:id="@+id/question3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bagaimana cara menjual sampah melalui NabungSampah?"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/blackPrimary"/>
+
+                <TextView
+                    android:id="@+id/answer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingBottom="16dp"
+                    android:textColor="@color/grayPrimary"/>
+
+                <!-- Question 4 -->
+                <TextView
+                    android:id="@+id/question4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bagaimana cara berlangganan program daur ulang sampah?"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/blackPrimary"/>
+
+                <TextView
+                    android:id="@+id/answer4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingBottom="16dp"
+                    android:textColor="@color/grayPrimary"/>
+
+                <!-- Question 5 -->
+                <TextView
+                    android:id="@+id/question5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sampah jenis apa saja yang dikelola oleh NabungSampah?"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/blackPrimary"/>
+
+                <TextView
+                    android:id="@+id/answer5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingBottom="16dp"
+                    android:textColor="@color/grayPrimary"/>
+
+                <!-- Question 6 -->
+                <TextView
+                    android:id="@+id/question6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apakah NabungSampah itu yayasan? atau Lembaga swadaya Masyarakat (LSM) atau organisasi Masyarakat?"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/blackPrimary"/>
+
+                <TextView
+                    android:id="@+id/answer6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingBottom="16dp"
+                    android:textColor="@color/grayPrimary"/>
+
+                <!-- Question 7 -->
+                <TextView
+                    android:id="@+id/question7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bagaimana bergabung menjadi mitra NabungSampah?"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/blackPrimary"/>
+
+                <TextView
+                    android:id="@+id/answer7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingBottom="16dp"
+                    android:textColor="@color/grayPrimary"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

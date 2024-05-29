@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permission untuk mengizinkan internet di aplikasi -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Permission untuk membaca external storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Permission untuk menulis (ekseskusi) ke external storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +22,40 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".SuccessRegisterActivity"
+            android:name=".AdminBalanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StatementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReadDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminPanelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeneralQuestionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExchangeDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SuccessExchangeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExchangeConfirmationActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterTwoActivity"
@@ -37,9 +79,6 @@
             android:name=".SuccessTransactionActivity"
             android:exported="false" />
         <activity
-            android:name=".TransactionActivity"
-            android:exported="false" />
-        <activity
             android:name=".ItemDetailActivity"
             android:exported="false" />
         <activity
@@ -47,11 +86,22 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacySettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SuccessRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransactionActivity"
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

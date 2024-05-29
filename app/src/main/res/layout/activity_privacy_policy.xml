@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgPrimary"
+    tools:context=".PrivacySettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <!-- Floating TextView "Privacy Policy" -->
+            <TextView
+                android:id="@+id/textViewPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kebijakan Privasi"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:fontFamily="@font/robotoregular"
+                android:background="@drawable/bg_gradient_primary_blue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"/>
+
+            <!-- Dummy Privacy Policy Content -->
+            <LinearLayout
+                android:id="@+id/linearLayoutPrivacy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_layout_white"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewPrivacy">
+
+                <!-- Privacy Policy content -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kami menghargai privasi Anda dan berkomitmen untuk melindungi informasi pribadi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi yang Anda berikan kepada kami."
+                    android:textSize="13sp"
+                    android:textColor="@color/blackPrimary"
+                    android:lineSpacingExtra="8sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pengumpulan Data: \nKami dapat mengumpulkan informasi pribadi seperti nama, alamat email, nomor telepon, dan informasi lain yang Anda berikan secara sukarela saat menggunakan aplikasi kami."
+                    android:textSize="13sp"
+                    android:textColor="@color/blackPrimary"
+                    android:lineSpacingExtra="8sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:fontFamily="sans-serif-light"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:lineSpacingExtra="8sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="Penggunaan Informasi: \nInformasi yang kami kumpulkan digunakan untuk menyediakan layanan, meningkatkan pengalaman pengguna, dan mengirimkan informasi terkait produk atau layanan kami."
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kami tidak akan membagikan informasi pribadi Anda kepada pihak ketiga tanpa izin Anda, kecuali yang diizinkan atau diwajibkan oleh hukum."
+                    android:textSize="13sp"
+                    android:textColor="@color/blackPrimary"
+                    android:lineSpacingExtra="8sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:fontFamily="sans-serif-light"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

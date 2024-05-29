@@ -9,7 +9,7 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/appLogo"
         android:layout_width="160dp"
         android:layout_height="84dp"
         android:layout_marginTop="256dp"
@@ -20,16 +20,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/logoTagline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:fontFamily="@font/mregular"
+        android:fontFamily="@font/robotothin"
         android:text="@string/slogan_app"
         android:textColor="@color/white"
-        android:textSize="19sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/appLogo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
