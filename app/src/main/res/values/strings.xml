@@ -1,18 +1,15 @@
 <resources>
-    <string name="app_name">MyApp</string>
-    <string name="slogan_app">yuk mulai nabung sampah</string>
-    <string name="signin">Masuk Sekarang</string>
+    <string name="app_name">BangSampah</string>
+    <string name="slogan_app">Yuk Mulai Nabung Sampah!</string>
+    <string name="signin">SIGN IN</string>
     <string name="continue_label">CONTINUE</string>
-    <string name="username_label">Nama Pengguna</string>
+    <string name="username_label">Username</string>
     <string name="password_label">Password</string>
-    <string name="email_label">Alamat E-mail</string>
-    <string name="save_change_label">Simpan</string>
-    <string name="fullname_label">Nama Lengkap</string>
-    <string name="phone_label">Nomor Telepon</string>
-    <string name="bio_label">Tambahkan Bio</string>
-    <string name="explore">Telusuri Sekarang</string>
-    <string name="check_details">Cek Detail</string>
-    <string name="my_dashboard">Dashboard</string>
+    <string name="email_label">Email Address</string>
+    <string name="save_change_label">SAVE_CHANGES</string>
+    <string name="fullname_label">Full Name</string>
+    <string name="bio_label">Add Bio</string>
+    <string name="explore">EXPLORE NOW</string>
     <string name="title_activity_exmaple">ExmapleActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
